@@ -1,10 +1,10 @@
-package com.hf.chat_application.config.chat;
+package com.hf.chat_application.chat;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
+@AllArgsConstructor
+@Getter
+@Setter
 @NoArgsConstructor
 @Builder
 public class ChatMessage {
