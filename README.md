@@ -20,7 +20,7 @@ Welcome to the Real-Time Web Applications with WebSockets tutorial! This tutoria
 
 ## Getting Started:
 1. Clone the repository to your local machine.
-2. Follow the step-by-step tutorial provided in `tutorial.md` to begin creating your own real-time web applications.
+2. Follow the step-by-step tutorial provided in `Readme.md` to begin creating your own real-time web applications.
 
 ## Prerequisites:
 - Basic understanding of web development and JavaScript.
