@@ -1,4 +1,4 @@
-package com.hf.chat_application.config.chat;
+package com.hf.chat_application.chat;
 
 public enum MessageType {
     CHAT,
