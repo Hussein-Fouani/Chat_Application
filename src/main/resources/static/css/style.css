@@ -105,9 +105,9 @@ button.accent {
     max-width: 500px;
     display: inline-block;
     vertical-align: middle;
-    position: relative;
     padding: 35px 55px 35px;
     min-height: 250px;
+    position: absolute;
     top: 50%;
     left: 0;
     right: 0;
