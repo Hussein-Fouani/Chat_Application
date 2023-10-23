@@ -1,6 +1,6 @@
 # Real-Time Web Applications with WebSockets
 
-Welcome to the Real-Time Web Applications with WebSockets tutorial! This tutorial aims to provide you with a clear understanding of WebSockets and their crucial role in enabling real-time communication in web applications.
+Welcome to the Real-Time Web Applications with WebSockets Project! This Project aims to provide you with a clear understanding of WebSockets and their crucial role in enabling real-time communication in web applications.
 
 ## Key Takeaways:
 1. **Comprehensive Understanding of WebSockets:**
