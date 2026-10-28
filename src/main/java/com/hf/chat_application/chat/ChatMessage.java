@@ -1,5 +1,6 @@
 package com.hf.chat_application.chat;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 @AllArgsConstructor
@@ -10,5 +11,6 @@ import lombok.*;
 public class ChatMessage {
     private String content;
     private String sender;
+    @JsonProperty("type")
     private MessageType messageType;
 }
