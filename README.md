@@ -1,35 +1,52 @@
-# Real-Time Web Applications with WebSockets
+# Chat Application
 
-Welcome to the Real-Time Web Applications with WebSockets Project! This Project aims to provide you with a clear understanding of WebSockets and their crucial role in enabling real-time communication in web applications.
+A real-time group chat built with Spring Boot WebSockets (STOMP over SockJS) and a plain HTML/JavaScript client.
 
-## Key Takeaways:
-1. **Comprehensive Understanding of WebSockets:**
-   - Gain a thorough knowledge of WebSockets and their significance in real-time web applications.
+## Tech Stack
 
-2. **Practical Implementation of WebSockets:**
-   - Learn how to set up WebSocket connections and implement real-time features in your web applications.
+- Java 17, Spring Boot 3.1
+- Spring WebSocket with STOMP and an in-memory simple message broker
+- SockJS and STOMP.js on the client (loaded from cdnjs)
+- Lombok
 
-3. **Building a Real-Time Chat Application:**
-   - Apply your knowledge to create a functional chat application, allowing users to exchange messages in real-time.
+## Features
 
-4. **Handling Real-World Scenarios:**
-   - Discover how to manage common challenges like connection errors and system failovers in real-time applications.
+- Enter a username and join a single public chat room
+- Messages are broadcast to every connected user in real time
+- Join and leave notifications when users connect or disconnect
+- Colored avatar per user
 
-5. **Best Practices for Security and Scalability:**
-   - Understand industry-standard best practices to ensure the security and scalability of your WebSocket-powered applications.
+## Getting Started
 
-## Getting Started:
-1. Clone the repository to your local machine.
-2. Follow the step-by-step tutorial provided in `Readme.md` to begin creating your own real-time web applications.
+### Prerequisites
 
-## Prerequisites:
-- Basic understanding of web development and JavaScript.
-- A code editor of your choice.
+- JDK 17
 
-## Contributing:
-If you'd like to contribute to this tutorial, please fork the repository and submit a pull request. We welcome contributions to improve and expand the content.
+No database is required.
 
-## Feedback and Support:
-If you have any questions, feedback, or need support, please open an issue or reach out to [author's email] for assistance.
+### Run
 
-Happy coding! 🚀
+```bash
+git clone https://github.com/Hussein-Fouani/Chat_Application.git
+cd Chat_Application
+./mvnw spring-boot:run
+```
+
+Open `http://localhost:8080` in two or more browser tabs, pick a username in each, and start chatting.
+
+## WebSocket API
+
+| Type | Destination | Description |
+|------|-------------|-------------|
+| Endpoint | `/ws` | SockJS/STOMP connection endpoint |
+| Send | `/app/chat.addUser` | Register the username for the session and announce the join |
+| Send | `/app/chat.sendMessage` | Send a chat message |
+| Subscribe | `/topic/public` | Receive chat messages and join/leave events |
+
+Message payload:
+
+```json
+{ "sender": "alice", "content": "Hello!", "type": "CHAT" }
+```
+
+`type` is one of `CHAT`, `JOIN`, `LEAVE`.
